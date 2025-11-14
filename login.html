@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrbanFit - Login / Cadastro</title>
+    <title>UrbanFit - Login</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
                 <li><a href="#">Coleções</a></li>
                 <li><a href="#">Promoções</a></li>
                 <li><a href="#footer-contato">Contato</a></li>
-                <li><a href="cadastro.html">Cadastro / Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
             </ul>
         </nav>
     </header>
@@ -36,10 +36,10 @@
             <!-- Abas -->
             <div class="login-tabs">
                 <label for="aba-login" class="login-tab">Login</label>
-                <label for="aba-cadastro" class="login-tab">Cadastro</label>
+                <label for="aba-cadastro" class="login-tab" onclick="window.location='cadastro.html'">Cadastro</label>
             </div>
 
-            <!-- Conteúdo das abas -->
+            <!-- Conteúdo -->
             <div class="login-conteudo">
 
                 <!-- LOGIN -->
@@ -57,26 +57,8 @@
                     <a href="#" class="esqueci-senha">Esqueci minha senha</a>
                 </div>
 
-                <!-- CADASTRO -->
-                <div class="box" id="cadastro-box">
-                    <h2>Criar Conta</h2>
-
-                    <label>Nome:</label>
-                    <input type="text">
-
-                    <label>Email:</label>
-                    <input type="email">
-
-                    <label>Senha:</label>
-                    <input type="password">
-
-                    <label>Confirmar Senha:</label>
-                    <input type="password">
-
-                    <button>Cadastrar</button>
-                </div>
-
             </div>
+
         </div>
 
     </main>
