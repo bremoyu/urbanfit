@@ -10,7 +10,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   color: #222;
-  background-color: #f9f9f9;
+  background-color: #01792f;
 }
 
 a {
@@ -54,7 +54,11 @@ main{
     padding: 2rem 3rem;
 }
 #hero {
-  background: linear-gradient(135deg, #ff8800, #111);
+  background-image: url("../images/capa-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: white;
   padding: 6rem 3rem;
   border-radius: 10px;
@@ -70,7 +74,6 @@ main{
     max-width: 600px;
     margin: 0 auto 2rem;
 }
-
 #hero #botao {
   background-color: #ff8800;
   padding: 0.8rem 1.6rem;
@@ -83,38 +86,95 @@ main{
 #hero #botao:hover {
   background-color: #ffa733;
 }
-#destaques {
+#colecoes {
   margin-bottom: 3rem;
 }
 
-#destaques h2 {
-  margin-bottom: 1.5rem;
+#colecoes h2 {
   font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
-#produtos {
+/* Container horizontal */
+#lista-colecoes {
   display: flex;
   gap: 1.5rem;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
 }
 
-#produtos article {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  flex: 1;
+/* Cada card */
+#lista-colecoes .colecao {
   min-width: 250px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
   transition: 0.3s;
 }
 
-#produtos article:hover {
-  transform: translateY(-5px);
+#lista-colecoes .colecao img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
-#produtos h3 {
-  font-size: 1.2rem;
+#lista-colecoes .colecao h3 {
+  padding: 1rem 1rem 0.3rem;
+}
+
+#lista-colecoes .colecao p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+/* Setas */
+.setas {
+  display: flex;
+  justify-content: flex-end;
   margin-bottom: 0.5rem;
+  gap: 0.5rem;
+}
+.seta {
+  font-size: 1.8rem;
+  cursor: default;
+  color: #ff8800;
+  opacity: 0.7;
+  user-select: none;
+}
+#promocoes {
+  background: #fff;
+  padding: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+#promocoes h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+.promocao-texto {
+  max-width: 600px;
+  margin: 0.5rem auto 1.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+.botao-promocao {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  background: #ff8800;
+  color: #111;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.botao-promocao:hover {
+  background: #ffa733;
 }
 #sobre {
   margin-bottom: 3rem;
@@ -123,6 +183,7 @@ main{
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 
 #sobre h2 {
   margin-bottom: 1rem;
