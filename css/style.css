@@ -455,9 +455,12 @@ footer ul li a:hover {
 
 #produto-card {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 2rem;
   align-items: center;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 #produto-card img {
