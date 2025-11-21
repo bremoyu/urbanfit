@@ -439,3 +439,75 @@ footer ul li a:hover {
     padding: 0.6rem;
   }
 }
+
+/* =======================
+   PÁGINA DE PRODUTO
+======================= */
+
+#produto {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 3rem auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+#produto-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#produto-card img {
+  width: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.produto-info h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.produto-info .descricao {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.produto-info .preco {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff8800;
+  margin-bottom: 1.5rem;
+}
+
+#botao-comprar {
+  background: #ff8800;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111;
+  transition: 0.3s;
+}
+
+#botao-comprar:hover {
+  background: #ffa733;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #produto-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #produto-card img {
+    width: 100%;
+  }
+}
