@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrbanFit - Produto</title>
+    <title>UrbanFit - Carrinho</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,31 +25,13 @@
 </header>
 
 <main>
-    <section id="produto">
-        <div id="produto-card">
-            
-            <img src="images/calça-street.jpg" alt="Calça Streetwear">
+    <section id="carrinho">
+        <h2>Carrinho</h2>
+        <div id="lista-carrinho"></div>
 
-            <div class="produto-info">
-                <h2>Calça Streetwear UrbanFit</h2>
-                <p class="descricao">Feita com tecido reciclável, leve, confortável e ideal para quem anda muito pela cidade.</p>
+        <h3 id="total"></h3>
 
-                <p class="preco">R$ 129,90</p>
-
-                <button id="botao-comprar"
-                  onclick="adicionarAoCarrinho({
-                   nome: 'Calça Streetwear UrbanFit',
-                   preco: 129.90,
-                   imagem: 'images/calça-street.jpg'
-                  })">
-                   Comprar
-                </button>
-
-                <a href="cart.html" class="botao-promocao">Ir para o carrinho</a>
-
-            </div>
-
-        </div>
+        <button id="limpar-carrinho">Limpar Carrinho</button>
     </section>
 </main>
 
@@ -79,10 +61,8 @@
     <div class="footer-direitos">
         <p>&copy; UrbanFit - Todos os direitos reservados.</p>
     </div>
-</footer>]
+</footer>
 
 <script src="js/cart.js"></script>
-
-
 </body>
 </html>
