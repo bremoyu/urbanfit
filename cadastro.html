@@ -52,7 +52,7 @@
                 <label>Senha:</label>
                 <input type="password" id="login-senha">
 
-                <button onclick="login()">Entrar</button>
+                <button>Entrar</button>
 
                 <a href="#" class="esqueci-senha">Esqueci minha senha</a>
             </div>
@@ -73,7 +73,7 @@
                 <label>Confirmar Senha:</label>
                 <input type="password" id="cad-confirmar">
 
-                <button onclick="cadastrar()">Cadastrar</button>
+                <button>Cadastrar</button>
             </div>
 
         </div>
@@ -109,61 +109,7 @@
     </div>
 </footer>
 
-
-<!-- ==========================
-     JAVASCRIPT DO SISTEMA
-=========================== -->
-<script>
-    function cadastrar() {
-        const nome = document.getElementById("cad-nome").value.trim();
-        const email = document.getElementById("cad-email").value.trim();
-        const senha = document.getElementById("cad-senha").value.trim();
-        const confirmar = document.getElementById("cad-confirmar").value.trim();
-
-        if (!nome || !email || !senha || !confirmar) {
-            alert("Preencha todos os campos!");
-            return;
-        }
-
-        if (senha !== confirmar) {
-            alert("As senhas não coincidem!");
-            return;
-        }
-
-        // Criar objeto usuário
-        const usuario = {
-            nome: nome,
-            email: email,
-            senha: senha
-        };
-
-        // Salvar no localStorage
-        localStorage.setItem("usuario", JSON.stringify(usuario));
-
-        alert("Cadastro realizado com sucesso! Agora faça login.");
-
-        document.getElementById("aba-login").checked = true;
-    }
-
-    function login() {
-        const email = document.getElementById("login-email").value.trim();
-        const senha = document.getElementById("login-senha").value.trim();
-
-        const usuario = JSON.parse(localStorage.getItem("usuario"));
-
-        if (!usuario) {
-            alert("Nenhum usuário cadastrado!");
-            return;
-        }
-
-        if (email === usuario.email && senha === usuario.senha) {
-            alert("Login realizado com sucesso!");
-            window.location.href = "produto.html"; // REDIRECIONA PARA PRODUTOS
-        } else {
-            alert("Email ou senha incorretos!");
-        }
-    }
-</script>
+<script src="js/cadastro.js"></script>
 
 </body>
 </html>
