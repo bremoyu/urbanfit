@@ -624,65 +624,76 @@ footer ul li a:hover {
     margin-right: 0;
   }
 }
+/* ================================
+      ESTILOS DO CATÁLOGO
+   ================================ */
 
-/* ==========================
-   CATALOGO CALÇAS
-========================== */
-
+/* Container principal do catálogo */
 #catalogo {
     padding: 40px 20px;
     text-align: center;
 }
 
 #catalogo h2 {
-    margin-bottom: 25px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
+/* Lista dos cards — grid simples e responsivo */
 #catalogo-lista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
+    margin-top: 20px;
+    padding: 10px;
 }
 
-.item-produto {
-    width: 250px;
-    border: 1px solid #ddd;
+/* Card de produto */
+.produto-card {
+    background: #fff; /* fundo branco igual ao resto do site */
+    border-radius: 10px;
     padding: 15px;
-    border-radius: 8px;
-    background-color: #fff;
-    transition: transform 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* leve sombra */
+    transition: transform 0.2s;
 }
 
-.item-produto:hover {
-    transform: scale(1.03);
+/* Efeito ao passar o mouse */
+.produto-card:hover {
+    transform: translateY(-5px);
 }
 
-.item-produto img {
+/* Imagens */
+.produto-card img {
     width: 100%;
-    border-radius: 8px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.item-produto h3 {
+/* Nome do produto */
+.produto-card h3 {
+    font-size: 1.1rem;
     margin: 10px 0;
-    font-size: 18px;
 }
 
+/* Preço */
 .preco {
-    margin: 5px 0 10px;
     font-weight: bold;
+    color: #111;
+    margin-bottom: 10px;
 }
 
-.botao-ver {
+/* Botão "ver detalhes" */
+.produto-card .botao {
     display: inline-block;
-    padding: 8px 15px;
-    background-color: black;
-    color: white;
+    padding: 8px 12px;
+    background: #111;
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 8px;
+    transition: background 0.2s;
 }
 
-.botao-ver:hover {
-    opacity: 0.8;
+.produto-card .botao:hover {
+    background: #333;
 }
