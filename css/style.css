@@ -624,3 +624,65 @@ footer ul li a:hover {
     margin-right: 0;
   }
 }
+
+/* ==========================
+   CATALOGO CALÇAS
+========================== */
+
+#catalogo {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#catalogo h2 {
+    margin-bottom: 25px;
+}
+
+#catalogo-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.item-produto {
+    width: 250px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+}
+
+.item-produto:hover {
+    transform: scale(1.03);
+}
+
+.item-produto img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.item-produto h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.preco {
+    margin: 5px 0 10px;
+    font-weight: bold;
+}
+
+.botao-ver {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.botao-ver:hover {
+    opacity: 0.8;
+}
