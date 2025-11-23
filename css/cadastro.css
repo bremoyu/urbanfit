@@ -1,0 +1,58 @@
+/*--------------------INICIO SEM ALTERAÇÃO-------------------- */
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+
+/* ESTILOS GLOBAIS */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #01792f;
+}
+
+/* ESTILO DA BARRA DE NAVEGAÇÃO PADRÃO */
+header{
+    display: flex; /* transforma em container flexivel */
+    justify-content: space-between;
+    padding: 24px 48px; /* o primeiro numero é top/down e o segundo é left/right */
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+header #logo h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 28.8px;
+}
+header p{
+    font-size: 14px;
+}
+nav ul{
+    display: flex;
+    gap: 24px; /*espaço entre elementos*/
+}
+nav a{
+    font-weight: bold;
+    transition: 0.3s; /*muda a duração de toda propriedade do a*/
+}
+nav a:hover{
+    color: #ff8800
+}
+
+/*--------------------CONTEUDO DA PAGINA COM OS FORMS-------------------- */
+
+
+
+
