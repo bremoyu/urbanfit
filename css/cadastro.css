@@ -53,6 +53,124 @@ nav a:hover{
 
 /*--------------------CONTEUDO DA PAGINA COM OS FORMS-------------------- */
 
+.login-cadastro-container { /* retangulo onde fica o forms */
+  max-width: 450px;
+  margin: 4rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+/* Esconde os radios */
+.login-cadastro-container input[type="radio"] {
+  display: none; 
+}
+
+/* label das abas */
+.login-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+/* 1 aba */
+.login-tab {
+  flex: 1; /* assim as abas vao dividir espaço igualmente */
+  text-align: center;
+  padding: 0.8rem;
+  background: #ddd;
+  font-weight: bold;
+  cursor: pointer; /* troca o mouse pela maozinha */
+  border-radius: 8px 8px 0 0;
+  transition: 0.3s;
+  color: #333;
+}
+
+/* quero excluir esta parte e fazer isso com js ao inves do uso do seletor ~ */
+#aba-login:checked ~ .login-tabs label[for="aba-login"],
+#aba-cadastro:checked ~ .login-tabs label[for="aba-cadastro"] {
+  background: #ff8800;
+  color: #111;
+}
+
+/* Conteúdo */
+.login-conteudo .box {
+  display: none;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#aba-login:checked ~ .login-conteudo #form-login {
+  display: flex;
+}
+
+#aba-cadastro:checked ~ .login-conteudo #form-cadastro {
+  display: flex;
+}
+
+.box h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Inputs */
+.login-conteudo input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.login-conteudo input:focus {
+  border-color: #ff8800;
+  box-shadow: 0 0 5px rgba(255,136,0,0.4);
+  outline: none;
+}
+
+/* Botões */
+.login-conteudo button {
+  width: 100%;
+  padding: 0.9rem;
+  background: #ff8800;
+  color: #111;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 0.5rem;
+}
+
+.login-conteudo button:hover {
+  background: #ffa733;
+}
+
+/* Esqueci senha */
+.esqueci-senha {
+  margin-top: 0.7rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ff8800;
+  display: block;
+  transition: 0.3s;
+}
+
+.esqueci-senha:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .login-tab {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
 
 
 
