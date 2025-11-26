@@ -161,6 +161,21 @@ footer ul li a:hover {
   background: #ffa733;
 }
 
+#botao-carrinho {
+  background: #ff8800;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111;
+  transition: 0.3s;
+}
+#botao-carrinho:hover {
+  background: #ffa733;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
   #produto-card {
