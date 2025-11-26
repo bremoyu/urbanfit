@@ -1,0 +1,174 @@
+/*--------------------INICIO SEM ALTERAÇÃO-------------------- */
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+
+/* ESTILOS GLOBAIS */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #01792f;
+}
+
+/* ESTILO DA BARRA DE NAVEGAÇÃO PADRÃO */
+header{
+    display: flex; /* transforma em container flexivel */
+    justify-content: space-between;
+    padding: 24px 48px; /* o primeiro numero é top/down e o segundo é left/right */
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+header #logo h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 28.8px;
+}
+header p{
+    font-size: 14px;
+}
+nav ul{
+    display: flex;
+    gap: 24px; /*espaço entre elementos*/
+}
+nav a{
+    font-weight: bold;
+    transition: 0.3s; /*muda a duração de toda propriedade do a*/
+}
+nav a:hover{
+    color: #ff8800
+}
+
+/* ========= FOOTER DA PAGINA ============== */
+
+footer {
+  background: #111;
+  color: #eee;
+  padding: 2rem 3rem;
+  margin-top: 3rem;
+}
+
+.footer-conteudo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.footer-conteudo div {
+  flex: 1;
+  min-width: 200px;
+}
+
+footer h3, footer h4 {
+  margin-bottom: 0.5rem;
+  color: #ff8800;
+}
+
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+footer ul li a {
+  color: #eee;
+  transition: 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ff8800;
+}
+
+.footer-direitos {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* ================== ESTILO DA PAGINA DE PRODUTOS ================= */
+
+#produto {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 3rem auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+#produto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#produto-card img {
+  width: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.produto-info h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.produto-info .descricao {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.produto-info .preco {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff8800;
+  margin-bottom: 1.5rem;
+}
+
+#botao-comprar {
+  background: #ff8800;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111;
+  transition: 0.3s;
+}
+
+#botao-comprar:hover {
+  background: #ffa733;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #produto-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #produto-card img {
+    width: 100%;
+  }
+}
