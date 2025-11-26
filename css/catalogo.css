@@ -1,0 +1,177 @@
+/*--------------------INICIO SEM ALTERAÇÃO-------------------- */
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+
+/* ESTILOS GLOBAIS */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #01792f;
+}
+
+/* ESTILO DA BARRA DE NAVEGAÇÃO PADRÃO */
+header{
+    display: flex; /* transforma em container flexivel */
+    justify-content: space-between;
+    padding: 24px 48px; /* o primeiro numero é top/down e o segundo é left/right */
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+header #logo h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 28.8px;
+}
+header p{
+    font-size: 14px;
+}
+nav ul{
+    display: flex;
+    gap: 24px; /*espaço entre elementos*/
+}
+nav a{
+    font-weight: bold;
+    transition: 0.3s; /*muda a duração de toda propriedade do a*/
+}
+nav a:hover{
+    color: #ff8800
+}
+
+/* ========= FOOTER DA PAGINA ============== */
+
+footer {
+  background: #111;
+  color: #eee;
+  padding: 2rem 3rem;
+  margin-top: 3rem;
+}
+
+.footer-conteudo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.footer-conteudo div {
+  flex: 1;
+  min-width: 200px;
+}
+
+footer h3, footer h4 {
+  margin-bottom: 0.5rem;
+  color: #ff8800;
+}
+
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+footer ul li a {
+  color: #eee;
+  transition: 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ff8800;
+}
+
+.footer-direitos {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* ============== ESTILO DA PAGINA DE CATALOGO ====================== /*
+
+/* ================================
+      ESTILOS DO CATÁLOGO
+   ================================ */
+
+/* Container principal do catálogo */
+#catalogo {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#catalogo h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Lista dos cards — grid simples e responsivo */
+#catalogo-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Card de produto */
+.produto-card {
+    background: #fff; /* fundo branco igual ao resto do site */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* leve sombra */
+    transition: transform 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.produto-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagens */
+.produto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Nome do produto */
+.produto-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Preço */
+.preco {
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+/* Botão "ver detalhes" */
+.produto-card .botao {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.produto-card .botao:hover {
+    background: #333;
+}
