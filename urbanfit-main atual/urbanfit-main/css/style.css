@@ -1,0 +1,506 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ESTILOS GLOBAIS */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #01792f;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: #111;
+  color: white;
+}
+header #logo h1{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header #logo p{
+    font-size: 0.9rem;
+    color: #ccc;
+}
+nav ul{
+    display: flex;
+    gap: 1.5rem;
+}
+nav a{
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ;
+}
+nav a:hover{
+    color: #ff8800;
+}
+main{
+    padding: 2rem 3rem;
+}
+#hero {
+  background-image: url("../images/capa-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 6rem 3rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+#hero h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+#hero p{
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+#hero #botao {
+  background-color: #ff8800;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #111;
+  transition: 0.3s;
+}
+
+#hero #botao:hover {
+  background-color: #ffa733;
+}
+#colecoes {
+  margin-bottom: 3rem;
+}
+
+#colecoes h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Container horizontal */
+#lista-colecoes {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+/* Cada card */
+#lista-colecoes .colecao {
+  min-width: 250px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+#lista-colecoes .colecao img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+#lista-colecoes .colecao h3 {
+  padding: 1rem 1rem 0.3rem;
+}
+
+#lista-colecoes .colecao p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+#promocoes {
+  background: #fff;
+  padding: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+#promocoes h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+.promocao-texto {
+  max-width: 600px;
+  margin: 0.5rem auto 1.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+.botao-promocao {
+  display: inline-block;
+  padding: 0.9rem 1.6rem;
+  background: #ff8800;
+  color: #111;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.botao-promocao:hover {
+  background: #ffa733;
+}
+#sobre {
+  margin-bottom: 3rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+#sobre h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+/* MEDIA QUERY E RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  #hero {
+    padding: 4rem 1.5rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+    .footer-conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+    #cadastro {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+}
+footer {
+  background: #111;
+  color: #eee;
+  padding: 2rem 3rem;
+  margin-top: 3rem;
+}
+
+.footer-conteudo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.footer-conteudo div {
+  flex: 1;
+  min-width: 200px;
+}
+
+footer h3, footer h4 {
+  margin-bottom: 0.5rem;
+  color: #ff8800;
+}
+
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+footer ul li a {
+  color: #eee;
+  transition: 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ff8800;
+}
+
+.footer-direitos {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* =======================
+   PÁGINA DE PRODUTO
+======================= */
+
+#produto {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 3rem auto;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+#produto-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#produto-card img {
+  width: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.produto-info h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.produto-info .descricao {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.produto-info .preco {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff8800;
+  margin-bottom: 1.5rem;
+}
+
+#botao-comprar {
+  background: #ff8800;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111;
+  transition: 0.3s;
+}
+
+#botao-comprar:hover {
+  background: #ffa733;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  #produto-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #produto-card img {
+    width: 100%;
+  }
+}
+/* ==========================
+   CARRINHO DE COMPRAS
+========================== */
+
+#carrinho {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#carrinho h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f7f7;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.item-carrinho img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.item-info {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.item-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.item-info p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.item-preco {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.botao-remover {
+  background: #ff4444;
+  border: none;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-remover:hover {
+  background: #ff7777;
+}
+
+#total-carrinho {
+  text-align: right;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#btn-finalizar {
+  display: block;
+  margin: 2rem auto 0;
+  background: #ff8800;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  color: #111;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+#btn-finalizar:hover {
+  background: #ffa733;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .item-carrinho {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .item-info {
+    margin-left: 0;
+  }
+
+  .item-preco {
+    margin-right: 0;
+  }
+}
+/* ================================
+      ESTILOS DO CATÁLOGO
+   ================================ */
+
+/* Container principal do catálogo */
+#catalogo {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#catalogo h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Lista dos cards — grid simples e responsivo */
+#catalogo-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Card de produto */
+.produto-card {
+    background: #fff; /* fundo branco igual ao resto do site */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* leve sombra */
+    transition: transform 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.produto-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagens */
+.produto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Nome do produto */
+.produto-card h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Preço */
+.preco {
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+/* Botão "ver detalhes" */
+.produto-card .botao {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.produto-card .botao:hover {
+    background: #333;
+}
