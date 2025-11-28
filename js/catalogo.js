@@ -35,7 +35,6 @@ const container = document.getElementById("catalogo-lista");
 
 // Verifica se a coleção existe dentro do objeto "produtos"
 if (produtos[colecao]) {
-
     // Percorre os produtos da coleção selecionada
     produtos[colecao].forEach(produto => {
 

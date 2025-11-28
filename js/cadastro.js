@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (email === usuario.email && senha === usuario.senha) {
             alert("Login realizado com sucesso!");
             // redireciona para outra página
-            window.location.href = "produto.html";
+           localStorage.setItem("logado", "true");
+            window.location.href = "index.html";
         } else {
             alert("Email ou senha incorretos!");
         }
