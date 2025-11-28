@@ -70,5 +70,20 @@ if (document.getElementById("limpar-carrinho")) {
     carregarCarrinho();
 }
 
+const btnFinalizar = document.getElementById("btnFinalizar");
+if (btnFinalizar) {
+    btnFinalizar.addEventListener("click", () => {
+        if (localStorage.getItem("logado") === "true") {
+            alert("Compra finalizada! Obrigado por comprar com a UrbanFit 😄");
+            localStorage.removeItem("carrinho");
+            window.location.href = "index.html";
+        } else {
+            alert("Você precisa estar logado para finalizar a compra!");
+            window.location.href = "cadastro.html";
+        }
+    });
+}
+
+
 // Exporta função para ser usada no produto.html
 window.adicionarAoCarrinho = adicionarAoCarrinho;

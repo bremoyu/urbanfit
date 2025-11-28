@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // pegar os botões do cadastro e do login
-    const btnCadastro = document.querySelector("#cadastro-box button");
-    const btnLogin = document.querySelector("#login-box button");
+    const btnCadastro = document.querySelector("#form-cadastro button");
+    const btnLogin = document.querySelector("#form-login button");
 
     // adicionar ações de clique
     btnCadastro.addEventListener("click", cadastrar);

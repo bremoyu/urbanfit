@@ -1,0 +1,213 @@
+/*====================================================INICIO SEM ALTERAÇÃO===========================================================*/
+
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+
+/* ESTILOS GLOBAIS */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background-color: #01792f;
+}
+
+/* ESTILO DA BARRA DE NAVEGAÇÃO PADRÃO */
+header{
+    display: flex; /* transforma em container flexivel */
+    justify-content: space-between;
+    padding: 24px 48px; /* o primeiro numero é top/down e o segundo é left/right */
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+header #logo h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 28.8px;
+}
+header p{
+    font-size: 14px;
+}
+nav ul{
+    display: flex;
+    gap: 24px; /*espaço entre elementos*/
+}
+nav a{
+    font-weight: bold;
+    transition: 0.3s; /*muda a duração de toda propriedade do a*/
+}
+nav a:hover{
+    color: #ff8800
+}
+
+/* ================================== FOOTER DA PAGINA ==================================================== */
+
+footer {
+  background: #111;
+  color: #eee;
+  padding: 2rem 3rem;
+  margin-top: 3rem;
+}
+
+.footer-conteudo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.footer-conteudo div {
+  flex: 1;
+  min-width: 200px;
+}
+
+footer h3, footer h4 {
+  margin-bottom: 0.5rem;
+  color: #ff8800;
+}
+
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+footer ul li a {
+  color: #eee;
+  transition: 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ff8800;
+}
+
+.footer-direitos {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* ========================= ESTILO DA PAGINA DO CARRINHO ======================== */
+
+#carrinho {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#carrinho h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f7f7;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.item-carrinho img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.item-info {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.item-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.item-info p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.item-preco {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.botao-remover {
+  background: #ff4444;
+  border: none;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-remover:hover {
+  background: #ff7777;
+}
+
+
+
+#total {
+  text-align: right;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#btnFinalizar {
+  display: block;
+  margin: 2rem auto 0;
+  background: #ff8800;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  color: #111;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+#btnFinalizar:hover {
+  background: #ffa733;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .item-carrinho {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .item-info {
+    margin-left: 0;
+  }
+
+  .item-preco {
+    margin-right: 0;
+  }
+}
+
